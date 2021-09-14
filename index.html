@@ -20,15 +20,24 @@
   <body>
     <h1>Welcome!</h1> 
     <h2>Clickers</h2>
-      <a href="https://codepen.io/bobzilla07-the-animator/pen/rNMyjxw">Bobzilla07 Cookie Clicker</a><p>
-      <a href="https://codepen.io/bobzilla07-the-animator/pen/dypVyBd">Dylans Donut Clicker</a>
-<p>
+    
+      <select id="select" onchange="
+var win = window.open(this.value, '_blank');
+  win.focus();
+">
+<option value="">Clickers</option>
+<option value="https://codepen.io/bobzilla07-the-animator/pen/rNMyjxw">Bobzilla07s Cookie Clicker</option>
+<option value="https://codepen.io/bobzilla07-the-animator/pen/dypVyBd">Dylans Donut Clciker</option>
+<option value="//setup git">Cookie Clicker</option>
+
+    </select>
+
     <h2>Pokemon</h2>
   <select id="select" onchange="
 var win = window.open(this.value, '_blank');
   win.focus();
 ">
-<option value="">Pokemon</option>
+<option value="">Ouroborzo Pokemon</option>
 <option value="http://ouroboroz.github.io/gba/launcher.html#pokemonlightplat">Pokemon Light Platnium</option>
 <option value="http://ouroboroz.github.io/gba/launcher.html#pokemondarkviolet">Pokemon Dark Violet</option>
 <option value="http://ouroboroz.github.io/gba/launcher.html#pokemonglaze">Pokemon Glaze</option>
