@@ -1,3 +1,6 @@
 body {
   background: orange;
 }
+body {
+  background: url(background.jpg);
+}
