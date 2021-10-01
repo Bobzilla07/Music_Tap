@@ -63,8 +63,8 @@ h33 {
       <head>
         <body>
    <button onclick="deletecookieuser()">Reset Data</button onclick="deletecookieuser()">
-    <button onclick=play()>1979</button>
-  <button onclick=play()>1979</button>
+    <button onclick=play1979()>1979</button>
+  <button onclick=playbwbfw()>Bullet With Butterfly Wings</button>
         </body>
 <script>
 
@@ -73,7 +73,10 @@ function play1979() {
   audio.play();
 }
   
-  
+  function playbwbfw() {
+  var audio = new Audio('https://bobzilla07.github.io/Music_Tap/Bullet-With-Butterfly-Wings.mp3');
+  audio.play();
+}
   
   function deletecookieuser() {
     document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
