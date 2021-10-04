@@ -54,6 +54,28 @@ h33 {
   body {
   background: url(https://raw.githubusercontent.com/Bobzilla07/web-platform-j1pnv3/master/backgound.png);
 }
+      
+      
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
   
   </style>
     <meta charset="UTF-8">
@@ -64,7 +86,15 @@ h33 {
         <body>
           <center><h1>Music Tap Beta</h1></center>
     <p align="right">
-  <button onclick="deletecookieuser()">Reset Data</button>
+      <div class="dropdown">
+  <button class="dropbtn">Dropdown</button>
+  <div class="dropdown-content">
+      <button onclick="deletecookieuser()">Reset Data</button>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+</div>
+
     </p>
     <button onclick=play1979()>1979</button>
   <button onclick=playbwbfw()>Bullet With Butterfly Wings</button>
