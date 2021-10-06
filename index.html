@@ -102,9 +102,15 @@ case "1979":
       text = "I Miss You by Blink-182"
     var audio = new Audio('https://bobzilla07.github.io/Music_Tap/I-Miss-You.mp3');
   audio.play();
-    break;case "All The Small Things":
+    break;
+    case "All The Small Things":
       text = "All The Small Things by Blink-182"
     var audio = new Audio('https://bobzilla07.github.io/Music_Tap/All-The-Small-Things.mp3');
+  audio.play();
+    break;
+       case "Move Along":
+      text = "Move Along-The All-American Rejects"
+    var audio = new Audio('https://bobzilla07.github.io/Music_Tap/Move-Along.mp3');
   audio.play();
     break;
     default:
@@ -112,7 +118,6 @@ case "1979":
   }
   document.getElementById("demo").innerHTML = text;
 }
-  
   function deletecookieuser() {
     document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
   }
