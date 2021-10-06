@@ -65,7 +65,11 @@ h33 {
       <head>
         <body>
           <center><h1>Music Tap Beta</h1></center>
-   
+   <input id="myInput" type="text">
+
+<button onclick="songPicker()">Play</button>
+
+<p id="demo"></p>
  <p align="right">
    <button onclick="deletecookieuser()">Reset Data</button>
           </p>
@@ -73,7 +77,26 @@ h33 {
   <button onclick=playbwbfw()>Bullet With Butterfly Wings</button>
         </body>
 <script>
+function songPicker() {
+  var text;
+  var songs = document.getElementById("myInput").value;
 
+  switch(songs) {
+    case "Bullet With Butterfly Wings":
+    var audio = new Audio('https://bobzilla07.github.io/Music_Tap/Bullet-With-Butterfly-Wings.mp3');
+  audio.play();
+    break;
+case "1979":
+      text = "1979 by Smashing Pumpkins"
+    var audio = new Audio('https://bobzilla07.github.io/Music_Tap/1979.mp3');
+  audio.play();
+    break;
+    default:
+    text = "That Song has not been programed in if you would like to suggest a song fill out the form under settings called Song Request";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+  
 function play1979() {
   var audio = new Audio('https://bobzilla07.github.io/Music_Tap/1979.mp3');
   audio.play();
