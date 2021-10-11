@@ -191,7 +191,10 @@ case "1979":
 }
   function deletecookieuser() {
     document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+  location.reload();
+return false;
   }
+  
   function checkcookiesoff() {
   var x = navigator.cookieEnabled;
 }
