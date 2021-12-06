@@ -138,7 +138,8 @@ h33 {
   background: url(https://raw.githubusercontent.com/Bobzilla07/web-platform-j1pnv3/master/backgound.png);
 }
       
-      
+      audio { display:none;}
+
 
   </style>
     <meta charset="UTF-8">
@@ -164,123 +165,21 @@ h33 {
   </div>
 </div>
   <img src="https://raw.githubusercontent.com/Bobzilla07/Music_Tap/master/Triangles.png"/>
+<form id="form">
+  <input id="myInput" value="Panic-Song">
+  <input type="submit">
+</form>
+<audio controls id="audio"></audio>
         
         <script>
-function songPicker() {
-  var text;
-  var songs = document.getElementById("myInput").value;
-
-  switch(songs) {
-    case "Bullet With Butterfly Wings":
-    var audio = new Audio('https://bobzilla07.github.io/Music_Tap/Bullet-With-Butterfly-Wings.mp3');
+form.addEventListener("submit", myFunction)
+function myFunction(e) {
+  e.preventDefault();
+  audio.src = 'https://bobzilla07.github.io/Music_Tap/' + myInput.value + '.mp3';
   audio.play();
-    break;
-case "1979":
-      text = "1979 by Smashing Pumpkins"
-    var audio = new Audio('https://bobzilla07.github.io/Music_Tap/1979.mp3');
-  audio.play();
-    break;
-       case "Tonight Tonight":
-      text = "Tonight Tonight by Smashing Pumpkins"
-   var audio = new Audio('https://bobzilla07.github.io/Music_Tap/Tonight-Tonight.mp3'); 
-      audio.play();
-    break;
-     case "Today":
-      text = "Today by Smashing Pumpkins"
-   var audio = new Audio('https://bobzilla07.github.io/Music_Tap/Today.mp3'); 
-      audio.play();
-    break;
-      case "I Miss You":
-      text = "I Miss You by Blink-182"
-    var audio = new Audio('https://bobzilla07.github.io/Music_Tap/I-Miss-You.mp3');
-  audio.play();
-    break;
-    case "All The Small Things":
-      text = "All The Small Things by Blink-182"
-    var audio = new Audio('https://bobzilla07.github.io/Music_Tap/All-The-Small-Things.mp3');
-  audio.play();
-    break;
-       case "Move Along":
-      text = "Move Along-The All-American Rejects"
-    var audio = new Audio('https://bobzilla07.github.io/Music_Tap/Move-Along.mp3');
-  audio.play();
-    break;
-    case "Beverly Hills":
-      text = "Beverly Hills by Weezer"
-    var audio = new Audio('https://bobzilla07.github.io/Music_Tap/Beverly-Hills.mp3');
-  audio.play();
-    break;
-       case "Holiday":
-      text = "Holiday by Weezer"
-    var audio = new Audio('https://bobzilla07.github.io/Music_Tap/Holiday.mp3');
-  audio.play();
-    break;
-         case "Island In The Sun":
-      text = "Island In The Sun by Weezer"
-    var audio = new Audio('https://bobzilla07.github.io/Music_Tap/Island-In-The-Sun.mp3');
-  audio.play();
-    break;
-         case "Perfect Situation":
-      text = "Perfect Situation by Weezer"
-    var audio = new Audio('https://bobzilla07.github.io/Music_Tap/Perfect-Situation.mp3');
-  audio.play();
-    break;
-         case "Pork And Beans":
-      text = "Pork And Beans by Weezer"
-    var audio = new Audio('https://bobzilla07.github.io/Music_Tap/Pork-And-Beans.mp3');
-  audio.play();
-    break;
-         case "Say It Aint So":
-      text = "Say It Aint So by Weezer"
-    var audio = new Audio('https://bobzilla07.github.io/Music_Tap/Say-It-Aint-So.mp3');
-  audio.play();
-    break;
-           case "Numb":
-          text = "Numb by Linkin Park"
-    var audio = new Audio('https://bobzilla07.github.io/Music_Tap/Numb.mp3');
-  audio.play();
-    break;
-                     case "New Divide":
-          text = "New Divide by Linkin Park"
-    var audio = new Audio('https://bobzilla07.github.io/Music_Tap/New-Divide.mp3');
-  audio.play();
-    break;
-                     case "In The End":
-          text = "In The End by Linkin Park"
-    var audio = new Audio('https://bobzilla07.github.io/Music_Tap/In-The-End.mp3');
-  audio.play();
-    break;
-                     case "Breaking The Habit":
-          text = "In The End by Linkin Park"
-    var audio = new Audio('https://bobzilla07.github.io/Music_Tap/Breaking-The-Habit.mp3');
-  audio.play();
-    break;
-           case "Grabli":
-          text = "Грабли(Grabli)by Noize MC"
-    var audio = new Audio('https://bobzilla07.github.io/Music_Tap/Грабли(Grabli).mp3');
-  audio.play();
-    break;
-    
-                     case "Iz Okna":
-          text = "Из окна(iz-okna)by Noize MC"
-    var audio = new Audio('https://bobzilla07.github.io/Music_Tap/Из окна(iz-okna).mp3');
-  audio.play();
-    break;
-                               case "Make Some Noize":
-          text = "Make Some Noize by Noize MC"
-    var audio = new Audio('https://bobzilla07.github.io/Music_Tap/Make-Some-Noize.mp3');
-  audio.play();
-    break;
-         case "Industry Baby":
-          text = "Industry Baby by Little Nas X"
-    var audio = new Audio('https://bobzilla07.github.io/Music_Tap/Industrybaby.mp3');
-  audio.play();
-    break;
-    default:
-    text = "That Song has not been programed in if you would like to suggest a song fill out the form under settings called Song Request";
-  }
-  document.getElementById("demo").innerHTML = text;
 }
+          
+          
   function deletecookieuser() {
     document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
   location.reload();
